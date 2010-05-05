@@ -9,6 +9,7 @@ ru-RU:
     ext_static_content_new_page: "Новая страница"
     ext_static_content_editing_page: "Редактирование страницы"
     ext_static_content_foreign_link: "Внешняя ссылка (URL)"
+    ext_static_content_show_in_sidebar: ""Отображать в боковом меню"
     ext_static_content_show_in_header: "Отображать в верхнем меню"
     ext_static_content_show_in_footer: "Отображать в нижнем меню"
     ext_static_content_position: "Позиция в меню"
@@ -19,3 +20,4 @@ ru-RU:
     ext_static_content_meta_keywords: "Ключевые слова"
     ext_static_content_meta_description: "Описание"
     ext_static_content_layout: "Макет"
+    ext_static_content_new_sub_page: "Добавить вложенную страницу"
