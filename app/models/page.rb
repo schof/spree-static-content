@@ -3,11 +3,11 @@ class Page < ActiveRecord::Base
 
   validates_presence_of :title
   validates_presence_of [:slug, :body], :if => :not_using_foreign_link?
-  
+
   named_scope :header_links, :conditions => ["show_in_header = ?", true], :order => 'position'
   named_scope :footer_links, :conditions => ["show_in_footer = ?", true], :order => 'position'
   named_scope :sidebar_links,:conditions => ["show_in_sidebar = ?", true], :order => 'position'
-  
+
   named_scope :visible, :conditions => {:visible => true}
 
   def initialize(*args)
@@ -25,16 +25,21 @@ class Page < ActiveRecord::Base
         Page.update_all("position = position - 1", ["? < position AND position <= ?", prev_position,  self.position])
       end
     end
-    
-    self.slug = slug_link
-    
+
+    if not_using_foreign_link?
+      self.slug = slug_link
+    else
+      self.slug = nil
+    end
+
   end
 
   def link
     foreign_link.blank? ? slug_link : foreign_link
   end
 
-private  
+  private
+
   def not_using_foreign_link?
     foreign_link.blank?
   end
@@ -42,7 +47,7 @@ private
   def slug_link
     ensure_slash_prefix slug
   end
-  
+
   def ensure_slash_prefix(str)
     str.index('/') == 0 ? str : '/' + str
   end
