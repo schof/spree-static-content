@@ -15,8 +15,10 @@ leading slash.  For example:
 
 The dynamic page can be made available again if you delete the static page or change its slug.
 
-Create your own copy of the app/views/content/show.html.erb template in your site
-extension to change the layout of the static pages.
+Create your own copy of the app/views/static_content/show.html.erb template in your site
+extension to change the layout of the static pages. Depending on your view path, you may
+also need to move vendor/extensions/static_content/show.html.erb to the side for your own
+template to get used instead.
 
 === Example to use the static pages inside a menu
   <ul>
