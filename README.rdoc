@@ -1,5 +1,7 @@
 = Static Content
 
+For spree 0.30 see the fork here : https://github.com/spree/spree-static-content
+
 Good, clean content management of pages for Spree.  You can use this to:
 
 - Add and manage static pages such as an 'About' page.
