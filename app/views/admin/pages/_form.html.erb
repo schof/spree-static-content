@@ -1,6 +1,5 @@
 <% content_for :head do %>
 
-  <%= javascript_include_tag 'jquery/jquery.js' %>
   <%= javascript_include_tag 'wymeditor/jquery.wymeditor.js' %>
 
 
@@ -18,7 +17,7 @@
           {'name': 'H2', 'title': 'Heading_2', 'css': 'wym_containers_h2'},
           {'name': 'H3', 'title': 'Heading_3', 'css': 'wym_containers_h3'},
           {'name': 'PRE', 'title': 'Preformatted', 'css': 'wym_containers_pre'},
-          {'name': 'BLOCKQUOTE', 'title': 'Blockquote', 'css': 'wym_containers_blockquote'},
+          {'name': 'BLOCKQUOTE', 'title': 'Blockquote', 'css': 'wym_containers_blockquote'}
         ],
         lang: '<%= I18n.locale.to_s.split("-").first %>'
       });
