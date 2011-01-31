@@ -29,11 +29,9 @@ template to get used instead.
     <% end %>
   </ul>
 
-== Installation and filter chain workaround:
-Suggest you load this extension after the localization extension (you get the localization extension for free in spree core)
-and before your remaining extensions as the static content extension specifies a filter in Spree::BaseController that may not get inherited by its
-controller subclasses if other extensions modify these controller subclasses first.
+== Installation
 
+<<<<<<< HEAD:README.rdoc
 We load the localization extension first to prevent its filter from being omitted from the filter chain.
 
 Hope to resolve this workaround in the near future, see bug here for more info: 
@@ -45,3 +43,10 @@ Add this to your environment.rb inside the
 
 ===
   config.extensions = [:localization, :static_content, :all]
+=======
+1. Add `gem "spree_static_content"` and `gem "spree_editor", :path => "../../spree_editor"` to your Gemfile
+1. Run `bundle install`
+1. Run `rails g spree_static_content:install`
+1. Run `rake db:migrate`
+1. Run `rake spree_editor:install`
+>>>>>>> f622601fb9d417347245fdb060f7dabf3b148faf:README.rdoc

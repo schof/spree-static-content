@@ -1,5 +1,5 @@
 ---
-ru-RU:
+ru:
     pages: "Страницы"
     ext_static_content_static_pages: "Статические страницы"
     ext_static_content_static_pages_desc: "Управление статическими страницами"
@@ -12,6 +12,7 @@ ru-RU:
     ext_static_content_show_in_sidebar: "Отображать в боковом меню"
     ext_static_content_show_in_header: "Отображать в верхнем меню"
     ext_static_content_show_in_footer: "Отображать в нижнем меню"
+    ext_static_content_show_in_sidebar: "Отображать в боковом меню"
     ext_static_content_position: "Позиция в меню"
     ext_static_content_visible: "Публиковать"
     ext_static_content_confirm_delete: "Вы уверены, что хотите удалить страницу?"
