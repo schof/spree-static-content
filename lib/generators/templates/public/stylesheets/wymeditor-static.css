@@ -17,24 +17,27 @@
 
 /* WYMeditor */
 
-/* Rozstrzelony */
+/* Justified */
 #static-content .justified /* p, h1, h2, h3, h4, h5, h6 */ {
   text-align: justify;
   /* text-align: justify; */
 }
 
-/* Wyśrodkowany */
+/* Centered */
 #static-content .centerd /* p, h1, h2, h3, h4, h5, h6 */ {
   text-align: center;
   /* text-align: center; */
 }
-
-/* Powiększ! */
+/* Bigger */
 #static-content .bigger /* p, code */{
   font-size: 1.2em;
   /* font-size: 1.2em; */
 }
-
+/* Smaller */
+#static-content .smaller /* p, code */{
+  font-size: 0.8em;
+  /* font-size: 0.8em; */
+}
 /* /WYMeditor */
 /* END EDITOR RELATED STYLES */
 

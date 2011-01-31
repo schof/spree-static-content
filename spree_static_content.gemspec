@@ -108,7 +108,7 @@ Gem::Specification.new do |s|
      "lib/generators/templates/public/javascripts/wymeditor/skins/twopanels/skin.css",
      "lib/generators/templates/public/javascripts/wymeditor/skins/twopanels/skin.js",
      "lib/generators/templates/public/javascripts/wymeditor/skins/wymeditor_icon.png",
-     "lib/generators/templates/public/stylesheets/static.css",
+     "lib/generators/templates/public/stylesheets/wymeditor-static.css",
      "lib/spree_static_content.rb",
      "lib/spree_static_content_hooks.rb",
      "spec/controllers/admin/pages_controller_spec.rb",
