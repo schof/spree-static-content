@@ -31,3 +31,9 @@ extension to change the layout of the static pages.
 1. Run `bundle install`
 1. Run `rails g spree_static_content:install`
 1. Run `rake db:migrate`
+
+=== Changes
+
+Recovered WYMeditor http://www.wymeditor.org/ which had been repaced in spree version with YUIEditor. WYM isn't perfect, but site admins
+should concentrate on content, and not be setting inline font styles and so on, that belongs in the CSS.
+
