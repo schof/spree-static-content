@@ -3,14 +3,6 @@ class Page < ActiveRecord::Base
 
   validates_presence_of :title
   validates_presence_of [:slug, :body], :if => :not_using_foreign_link?
-<<<<<<< HEAD:app/models/page.rb
-
-  named_scope :header_links, :conditions => ["show_in_header = ?", true], :order => 'position'
-  named_scope :footer_links, :conditions => ["show_in_footer = ?", true], :order => 'position'
-  named_scope :sidebar_links,:conditions => ["show_in_sidebar = ?", true], :order => 'position'
-
-  named_scope :visible, :conditions => {:visible => true}
-=======
   
   scope :header_links, where(["show_in_header = ?", true])
   scope :footer_links, where(["show_in_footer = ?", true])
@@ -18,7 +10,6 @@ class Page < ActiveRecord::Base
   scope :visible, where(:visible => true)
   
   before_save :update_positions_and_slug
->>>>>>> f622601fb9d417347245fdb060f7dabf3b148faf:app/models/page.rb
 
   def initialize(*args)
     super(*args)
@@ -41,27 +32,10 @@ private
         Page.update_all("position = position - 1", ["? < position AND position <= ?", prev_position,  self.position])
       end
     end
-<<<<<<< HEAD:app/models/page.rb
-
-    if not_using_foreign_link?
-      self.slug = slug_link
-    else
-      self.slug = nil
-    end
-
-  end
-=======
->>>>>>> f622601fb9d417347245fdb060f7dabf3b148faf:app/models/page.rb
 
     self.slug = slug_link  
   end
-<<<<<<< HEAD:app/models/page.rb
-
-  private
-
-=======
   
->>>>>>> f622601fb9d417347245fdb060f7dabf3b148faf:app/models/page.rb
   def not_using_foreign_link?
     foreign_link.blank?
   end
@@ -69,7 +43,7 @@ private
   def slug_link
     ensure_slash_prefix slug
   end
-
+  
   def ensure_slash_prefix(str)
     str.index('/') == 0 ? str : '/' + str
   end
